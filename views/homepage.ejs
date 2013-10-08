@@ -1,0 +1,28 @@
+<%- stylesheet('/static/css/style.css') %>
+<% script('/static/js/placeholder.js'); %>
+<div class="container">
+  <div class="wrapper">
+    <h1><i></i><span>GoInstant</span> Maps Demo</h1>
+    <div class="panel">
+      <div>
+        <p>Welcome! GoInstant Maps is a real-time, multi-user experience that demonstrates how our technology works.</p>
+        <p>Type in your name below and you'll be brought into Google Maps. Then invite your friends via SMS or email, and they'll join you in real-time.</p>
+        <!--Tooltip occurs when a user is invited-->
+        <% if (sessionId && !user) { %>
+          <div class="tool-tip">
+            You've been invited to join a friend's map! Enter your name to join:
+            <span class="arrow"></span>
+          </div>
+        <% } %>
+      </div>
+      <form method="post" action="/auth">
+        <input type="text" name="displayName" id="displayName" maxlength="15" placeholder="Your Name">
+        <button type="submit" class="btn">Start</button>
+      </form>
+    </div>
+    <p>How does GoInstant Maps work?  <a href="http://goinstant.com/examples" target="_blank"> Learn More<i></i></a></p>
+  </div>
+</div>
+<div id="footer">
+  <p>&copy; GoInstant 2013. All Rights Reserved. <a href="http://goinstant.com/terms">Terms & Conditions</a>. This is a demo of <a href="http://goinstant.com">GoInstant</a> beta.</p>
+</div>

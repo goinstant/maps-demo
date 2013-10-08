@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web-staging.goinstant.org/" />
+<title>sbs-maps</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">sbs-maps</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/how-it-works</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=demo-left</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=demo-right</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForFrameToLoad</td>
+	<td>id=demo-left</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>waitForFrameToLoad</td>
+	<td>id=demo-right</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.gi-collapse &gt; span:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div.gi-collapse.collapsed &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.gi-collapse &gt; span:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.gi-collapse.collapsed &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div.gi-collapse.collapsed &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.gi-collapse &gt; span:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.gi-collapse.collapsed &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.gi-collapse.collapsed &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.gi-collapse &gt; span:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.gi-collapse.collapsed &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.gi-collapse &gt; span:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=search-bar</td>
+	<td>new york</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.pac-item-refresh:nth-child(1)</td>
+	<td>2500</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=search-bar</td>
+	<td>new york</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.pac-item-refresh:nth-child(1)</td>
+	<td>2500</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;Zoom in&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div[title=&quot;Rotate map 90 degrees&quot;] &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=demo-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div[title=&quot;Rotate map 90 degrees&quot;] &gt; img</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<% script('https://' + platformAsset) %>
+<% script('https://' + platformHost + '/widgets/user-colors/latest/user-colors.min.js') %>
+<% script('https://' + platformHost + '/widgets/user-list/latest/user-list.min.js') %>
+<% script('https://' + platformHost + '/widgets/form/latest/form.min.js') %>
+
+<% script('/static/js/marker.js'); %>
+<% script('/static/js/auto_complete.js'); %>
+<% script('/static/js/send_invite.js'); %>
+<% script('/static/js/multiplayer_map.js'); %>
+<% script('/static/js/map_demo.js'); %>
+
+<% stylesheet('/static/css/map.css'); %>
+<% stylesheet('https://' + platformHost + '/widgets/user-list/latest/user-list.css'); %>
+<% stylesheet('https://' + platformHost + '/widgets/form/latest/form.css'); %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var config = {
+      connectUrl: 'https://<%= platformConnect %>',
+      token: '<%= platformToken %>',
+      sessionId: '<%= sessionId %>',
+      index: '<%= index %>',
+      container: document.getElementById('map-canvas'),
+      scrollEnabled: false,
+      streetEnabled: true,
+      throttle: 50
+    };
+
+    var mapDemo = new window.goinstant.MapDemo(config);
+    mapDemo.initialize();
+  });
+</script>
+
+<div id="map-canvas"></div>
+
+<div id="button-container">
+  <form id="search-form" onsubmit="return false;">
+    <input type="text" id="search-bar" name="search-bar" placeholder="Start typing to find a place!" />
+    <a href="#" id="search-button" class="btn btn-success"><i class="icon-search icon-white"></i></a>
+  </form>
+</div>
+
+<a href="#" id="close-street-view" role="button" class="btn"><i class="icon-back"></i><span>Exit Streetview</span></a>

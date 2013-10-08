@@ -1,0 +1,311 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+body {
+  background: #0c4072 url(../img/home/bg.jpg) no-repeat center center fixed; 
+  font-family: "proxima-nova", sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input, button {
+  font-family: "proxima-nova", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 170px;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5em;
+  span {
+    font-weight: 200;
+  }
+  i {
+    display: inline-block;
+    width: 51px;
+    height: 70px;
+    margin: 0 .5em;
+    background: url('../img/home/pin-logo.png');
+    margin-bottom: -.75em;
+  }
+}
+
+.panel {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 3px;
+  overflow: hidden;
+  > div {
+    padding: 2em 1.75em;
+    @extend .clearfix;
+    p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin: 0;
+      &:first-child {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: .5em;
+      }
+    }
+  }
+  > form {
+    padding: 1.25em 1.75em;
+    background-color: #e5e5e5;
+    margin: 0;
+    input {
+      margin: 0;
+      &[type="text"] {
+        width: 72%;
+        height: auto;
+        padding: .75em;
+        font-size: 1.2em;
+        box-shadow: none;
+        &:focus {
+          border-color: #999;
+        }
+      }
+    }
+    button {
+      width: 23%;
+      margin-left: 3%;
+      box-shadow: none;
+      text-shadow: none;
+      border: 0;
+      padding: .8em;
+      background: #49ca00;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      &:hover {
+        background: darken(#49ca00, 5%);
+        color: white;
+      }
+    }
+  }
+}
+
+.tool-tip {
+  display: block;
+  float: left;
+  margin: 1.5em 0 -1.5em -.25em;
+  position: relative;
+
+  font-size: .9em;
+  font-weight: 800;
+  background: #132740;
+  border-radius: 3px;
+  color: #EDFBFF;
+  padding: .75em 1.25em .75em 3.5em;
+  background: #132740 url('../img/home/icon-info.png') no-repeat 1.25em center;
+  span.arrow {
+    position: absolute;
+    bottom: -13px;
+    left: 2em;
+    width: 0; 
+    height: 0; 
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #132740;
+
+  }
+}
+
+.wrapper {
+  > p {
+    text-align: center;
+    color: white;
+    padding: 1em 0 0;
+    margin-top: 2.75em;
+    border-top: 1px solid #055b99;
+    font-weight: bold;
+    a {
+      color: #a2d8ff;
+      text-decoration: underline;
+      text-transform: uppercase;
+      font-size: .8em;
+      position: relative;
+      right: -3px;
+      &:hover {
+        text-decoration: none;
+      }
+      i {
+        width: 6px;
+        height: 11px;
+        display: inline-block;
+        margin-left: .5em;
+        background: url('../img/home/arrow.png') no-repeat 0 1px;
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: #055b99;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  p {
+    font-size: .875em;
+    margin: 0;
+    color: #c1e0f1;
+    line-height: 1.5;
+    a {
+      color: #c1e0f1;
+      text-decoration: underline;
+      &:hover {
+          text-decoration: none;
+        }
+      }
+  }
+}
+
+.share-buttons {
+  margin: 2em 0;
+  a {
+    width: 48%;
+    display: block;
+    float: left;
+    height: 43px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    overflow: hidden;
+    line-height: 3;
+    &:first-child {
+      margin-right: 4%;
+    }
+    span {
+      display: block;
+      float: left;
+      width: 43px;
+      height: 43px;
+      margin-right: 1.4em;
+      padding: .55em .65em;
+    }
+    i {
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: url(../img/home/social-sprite.png) no-repeat;
+    }
+    &.twitter {
+      background-color: #00acee;
+      span {
+        background-color: #33bdf1;
+      }
+      &:hover {
+        background-color: darken(#00acee, 5%);
+      }
+      i {
+        background-position: 0 -45px;
+      }
+    }
+    &.facebook {
+      background-color: #44619d;
+      span {
+        background-color: #5771a7;
+      }
+      &:hover {
+        background-color: darken(#44619d, 5%);
+      }
+      i {
+        background-position: 0 0;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+    font-size: .8em;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .panel {
+    > form {
+      input[type="text"] {
+        width: 60%;
+        font-size: 1.25em;
+      }
+      button {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    margin-top: 1em;
+    > p {
+      margin-top: 1.5em;
+      a {
+        display: block;
+      }
+    }
+  }
+  h1 {
+    font-size: 1.6em;
+    i {
+      margin-bottom: -1.75em;
+      margin-left: 0;
+    }
+  }
+  .panel {
+    > div {
+      p, p:first-child {
+        font-size: .9em;
+      }
+    }
+  }
+  .share-buttons {
+    a {
+      width: 100%;
+      margin-bottom: .5em;
+    }
+  }
+  #footer {
+    padding: 1em;
+  }
+}
