@@ -1,6 +1,6 @@
 # GoInstant Google Maps Demo
 
-This repository demonstrates binding the [Google Maps API](https://developers.google.com/maps/) to the [GoInstant API]().
+This repository demonstrates binding the [Google Maps API](https://developers.google.com/maps/) to the [GoInstant API](https://developers.goinstant.com/v1/).
 
 [View live demo here](https://maps.goinstant.com/).
 
