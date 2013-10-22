@@ -31,6 +31,12 @@
       margin: 5px 0 0 12px; }
   .gi-userlist.gi-right.gi-override .gi-color {
     border-radius: 2px; }
+  .gi-userlist.gi-right.gi-override .gi-options {
+    height: 39px; }
+    .gi-userlist.gi-right.gi-override .gi-options span {
+      margin: 12px 12px 12px 0; }
+    .gi-userlist.gi-right.gi-override .gi-options input {
+      margin-top: 8px; }
 
 html, body {
   height: 100%;
