@@ -13,10 +13,8 @@
       "path": "/v1/platform.min.js"
     },
     "account": "myAccount",
-    "app": "myApp"
-  },
-  "auth": {
-    "secret": "00000000000000000000000000000"
+    "app": "myApp",
+    "secret": "j12345myappsecret34567"
   },
   "twilio": {
     "accountSid":"0000000000000000000000000000000",

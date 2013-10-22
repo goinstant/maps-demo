@@ -94,6 +94,7 @@ setupEnv()
 
 }
 
+echo "Press [Enter] to skip any option"
 
 while getopts "e:h:" opt; do
   case $opt in
