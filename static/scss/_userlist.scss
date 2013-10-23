@@ -41,4 +41,13 @@
 	.gi-color {
 	    border-radius: 2px;
 	}
+  .gi-options {
+    height: 39px;
+    span {
+      margin: 12px 12px 12px 0;
+    }
+    input {
+      margin-top: 8px;
+    }
+  }
 }
