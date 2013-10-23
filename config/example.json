@@ -2,10 +2,7 @@
   "server": {
     "listen": 3000
   },
-  "redis": {
-    "host": "localhost",
-    "port": "6379"
-  },
+  "redisurl": "redis://localhost:6379",
   "platform": {
     "host": "goinstant.net",
     "asset": {
