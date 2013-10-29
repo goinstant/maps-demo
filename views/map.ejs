@@ -1,0 +1,97 @@
+<% if (gaAccount && gaDomain) { %>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<%= gaAccount %>']);
+  _gaq.push(['_setDomainName', '<%= gaDomain %>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<% } %>
+<% script('https://' + platformAsset) %>
+<% script('https://' + platformHost + '/widgets/user-colors/latest/user-colors.min.js') %>
+<% script('https://' + platformHost + '/widgets/user-list/latest/user-list.min.js') %>
+<% script('https://' + platformHost + '/widgets/form/latest/form.min.js') %>
+
+<% script('/static/js/marker.js'); %>
+<% script('/static/js/auto_complete.js'); %>
+<% script('/static/js/send_invite.js'); %>
+<% script('/static/js/multiplayer_map.js'); %>
+<% script('/static/js/map_demo.js'); %>
+
+<% stylesheet('/static/css/map.css'); %>
+<% stylesheet('https://' + platformHost + '/widgets/user-list/latest/user-list.css'); %>
+<% stylesheet('https://' + platformHost + '/widgets/form/latest/form.css'); %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var config = {
+      connectUrl: 'https://<%= platformConnect %>',
+      token: '<%= platformToken %>',
+      sessionId: '<%= sessionId %>',
+      index: null,
+      container: document.getElementById('map-canvas'),
+      scrollEnabled: true,
+      streetEnabled: true,
+      throttle: 50
+    };
+
+    var mapDemo = new window.goinstant.MapDemo(config);
+    mapDemo.initialize();
+  });
+</script>
+
+<div id="map-canvas"></div>
+
+<div id="button-container">
+  <div class="map-search">
+    <form id="search-form" onsubmit="return false;">
+      <input type="text" id="search-bar" name="search-bar"  placeholder="Start typing to find a place!" />
+      <a href="#" class="btn" id="search-button"><i class="icon-search"></i></a>
+    </form>
+  </div>
+  <a href="#invite_modal" id="invite-button" role="button" class="btn btn-primary" data-toggle="modal"><i class="icon-invite"></i><span> Invite</span></a>
+</div>
+
+<a href="#" id="close-street-view" role="button" class="btn"><i class="icon-back"></i><span>Exit Streetview</span></a>
+
+<div id="invite_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="Invite" aria-hidden="true">
+  <div id="invite_modal_body" class="clearfix">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 id="invite_modalLabel"><span><i class="icon-invite-dark"></i></span> Invite Your Friends</h3>
+    <p>Invite your friends to join you via email or SMS. Each of you will see the same map, find places and navigate together.</p>
+    <div id="invite_toggle">
+      <b>Invite By:</b>
+      <div class="btn-group">
+        <button class="btn" id="sms_visible">SMS</button>
+        <button class="btn" id="email_visible">Email</button>
+      </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div id="invite_phone_contain">
+      <span class="invite_header">Invite by SMS:</span>
+      <div class="control-group">
+        <div class="controls">
+          <input class="invite_phone" type="tel" name="phone" placeholder="+15555555555">
+        </div>
+      </div>
+    </div>
+    <div id="invite_email_contain">
+    <span class="invite_header">Invite by Email:</span>
+      <div class="control-group">
+        <div class="controls">
+          <input class="invite_email" type="text" name="email" placeholder="example@example.com">
+        </div>
+      </div>
+    </div>
+    <input id="invite_form_submit" class="btn pull-right" type="submit" value="Send Invite">
+  </div>
+
+  <div class="modal-footer">
+    <p>Alternatively, copy & paste the URL in the address bar and share that with people directly.</p>
+  </div>
+</div>

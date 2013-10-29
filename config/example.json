@@ -1,0 +1,39 @@
+{
+  "server": {
+    "listen": 3000
+  },
+  "redisurl": "redis://localhost:6379",
+  "expressSecret": "00000000000000",
+  "platform": {
+    "host": "goinstant.net",
+    "asset": {
+      "subdomain": "cdn",
+      "path": "/v1/platform.min.js"
+    },
+    "account": "myAccount",
+    "app": "myApp",
+    "secret": "0000000000000000000000000000000000000000000000000000000",
+    "iss": "yourdomain.com"
+  },
+  "twilio": {
+    "accountSid": "0000000000000000000000000000000",
+    "auth_token": "0000000000000000000000000000000000000",
+    "number": "+1000000000",
+    "invite_body": "%s would like you to join their maps session at %s"
+  },
+  "sendgrid": {
+    "user": "username",
+    "password": "password",
+    "from": "noreply@yourdomain.com",
+    "subject": "GoInstant Maps Demo Invitation",
+    "options": {
+      "maxConnections": 20
+    },
+    "invite_body": "<html><body>Your friend, %s, has invited you to join them on GoInstant Maps Demo. %s is online right now, waiting for you! Click the link below to join them: <br><br> %s <br><br> Together with %s you'll be able to find places and navigate together, in real time. You will see when %s does something, and they'll see when you take an action as well. You can jointly browse GoInstant Maps Demo and explore the world together!</body></html>"
+  },
+  "ga": {
+    "account": "abcdefghijklmnop",
+    "domain": "yourdomain.com"
+  },
+  "typekit_url": "//use.typekit.net/abcdefghijkl.js"
+}

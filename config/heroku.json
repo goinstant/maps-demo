@@ -1,0 +1,24 @@
+{
+  "server": {
+    "listen": 4000
+  },
+  "platform": {
+    "host": "goinstant.net",
+    "asset": {
+      "subdomain": "cdn",
+      "path": "/v1/platform.min.js"
+    },
+    "iss": "yourapp.herokuapp.com"
+  },
+  "twilio": {
+    "invite_body": "%s would like you to join their maps session at %s"
+  },
+  "sendgrid": {
+    "from": "noreply@yourdomain.com",
+    "subject": "GoInstant Maps Demo Invitation",
+    "options": {
+      "maxConnections": 20
+    },
+    "invite_body": "<html><body>Your friend, %s, has invited you to join them on GoInstant Maps Demo. %s is online right now, waiting for you! Click the link below to join them: <br><br> %s <br><br> Together with %s you'll be able to find places and navigate together, in real time. You will see when %s does something, and they'll see when you take an action as well. You can jointly browse GoInstant Maps Demo and explore the world together!</body></html>"
+  }
+}
