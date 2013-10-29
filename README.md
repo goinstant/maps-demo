@@ -2,7 +2,7 @@
 
 This repository demonstrates binding the [Google Maps API](https://developers.google.com/maps/) to the [GoInstant API](https://developers.goinstant.com/v1/).
 
-!(side-by-side demo screenshot)[./static/img/screenshot.png]
+![side-by-side demo screenshot](./static/img/screenshot.png)
 
 View the [live demo of this code here](https://maps.goinstant.com/), or try the [side-by-side live demo here](https://goinstant.com/how-it-works).
 
