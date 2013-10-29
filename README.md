@@ -2,7 +2,9 @@
 
 This repository demonstrates binding the [Google Maps API](https://developers.google.com/maps/) to the [GoInstant API](https://developers.goinstant.com/v1/).
 
-[View live demo here](https://maps.goinstant.com/).
+![side-by-side demo screenshot](./static/img/screenshot.png)
+
+View the [live demo of this code here](https://maps.goinstant.com/), or try the [side-by-side live demo here](https://goinstant.com/how-it-works).
 
 ## Running the Demo Yourself
 
@@ -129,3 +131,13 @@ heroku git:remote -a <stg repo name>
 ```
 
 
+# Maps powered by GoInstant
+
+<a href="http://goinstant.com">GoInstant</a> is an API for integrating realtime, multi-user functionality into your app.
+You can check it out and <a href="https://goinstant.com/signup">sign up for free</a>.
+
+# Legal
+
+&copy; 2013 GoInstant Inc., a salesforce.com company
+
+Licensed under the 3-clause BSD license, see `LICENSE` file for details.
