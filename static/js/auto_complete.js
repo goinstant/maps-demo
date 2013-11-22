@@ -21,10 +21,9 @@ var _ = window._;
 /**
  * @constructor
  */
-function AutoComplete(map, marker, room) {
+function AutoComplete(map, marker) {
   this._map = map;
   this._marker = marker;
-  this._room = room;
 
   this._selecting = false;
   this._autoComplete = null;

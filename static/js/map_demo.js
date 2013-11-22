@@ -77,14 +77,14 @@ MapDemo.prototype._platformConnect = function(cb) {
     };
   }
 
-  var platform = new goinstant.Platform(this._connectUrl, options);
+  var connection = new goinstant.Connection(this._connectUrl, options);
 
-  platform.connect(this._token, function(err) {
+  connection.connect(this._token, function(err) {
     if (err) {
       return cb(err);
     }
 
-    self._room = platform.room(self._sessionId);
+    self._room = connection.room(self._sessionId);
 
     self._room.join(function(err) {
       if (err) {
@@ -152,7 +152,7 @@ MapDemo.prototype._initializeMap = function(cb) {
       }
 
       // Setup auto-complete addon
-      var autoComplete = new AutoComplete(map, marker, self._room);
+      var autoComplete = new AutoComplete(map, marker);
       autoComplete.initialize();
     });
 
