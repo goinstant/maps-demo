@@ -1,5 +1,3 @@
-@import "userlist.scss";
-
 $blue: #0c4072;
 
 html, body {
@@ -371,3 +369,8 @@ input, button {
 
 }
 
+// Chat Blink
+.gi-chat.gi-override .gi-collapse-wrapper.gi-widget-blink,
+.gi-chat.gi-override .gi-collapse-wrapper.gi-widget-blink .gi-collapse {
+  background-color: #006dcc;
+}

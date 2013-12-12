@@ -16,6 +16,7 @@
 <% script('https://' + platformHost + '/widgets/user-colors/v0.1.0/user-colors.min.js') %>
 <% script('https://' + platformHost + '/widgets/user-list/latest/user-list.min.js') %>
 <% script('https://' + platformHost + '/widgets/form/latest/form.min.js') %>
+<% script('https://' + platformHost + '/widgets/chat/latest/chat.min.js')%>
 
 <% script('/static/js/marker.js'); %>
 <% script('/static/js/auto_complete.js'); %>
@@ -26,6 +27,7 @@
 <% stylesheet('/static/css/map.css'); %>
 <% stylesheet('https://' + platformHost + '/widgets/user-list/latest/user-list.css'); %>
 <% stylesheet('https://' + platformHost + '/widgets/form/latest/form.css'); %>
+<% stylesheet('https://' + platformHost + '/widgets/chat/latest/chat.css'); %>
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -37,6 +39,7 @@
       container: document.getElementById('map-canvas'),
       scrollEnabled: true,
       streetEnabled: true,
+      chatEnabled: true,
       throttle: 50
     };
 
