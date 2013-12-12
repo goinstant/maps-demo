@@ -1,43 +1,3 @@
-.gi-userlist.gi-right.gi-override {
-  padding: 0;
-  background: none;
-  border-right: 0; }
-  .gi-userlist.gi-right.gi-override li {
-    background: white;
-    padding: 7px; }
-  .gi-userlist.gi-right.gi-override .gi-inner {
-    border-radius: 3px 0 0 3px;
-    border: 1px solid #bbb;
-    border-right: 0;
-    border-bottom: 0;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
-    .gi-userlist.gi-right.gi-override .gi-inner.collapsed {
-      border-radius: 3px 0 0 0; }
-  .gi-userlist.gi-right.gi-override .gi-collapse {
-    width: 38px;
-    bottom: -29px;
-    z-index: 0;
-    background: #eee;
-    border: 1px solid #bbb;
-    border-right: 0;
-    border-top: 0;
-    border-radius: 0 0 0 3px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
-    .gi-userlist.gi-right.gi-override .gi-collapse:hover {
-      background: #f7f7f7; }
-    .gi-userlist.gi-right.gi-override .gi-collapse span {
-      margin: 5px 0 0 13px; }
-    .gi-userlist.gi-right.gi-override .gi-collapse.collapsed span {
-      margin: 5px 0 0 12px; }
-  .gi-userlist.gi-right.gi-override .gi-color {
-    border-radius: 2px; }
-  .gi-userlist.gi-right.gi-override .gi-options {
-    height: 39px; }
-    .gi-userlist.gi-right.gi-override .gi-options span {
-      margin: 12px 12px 12px 0; }
-    .gi-userlist.gi-right.gi-override .gi-options input {
-      margin-top: 8px; }
-
 html, body {
   height: 100%;
   margin: 0;
@@ -330,3 +290,6 @@ input, button {
     margin-left: 0; }
     #invite-button span {
       display: inline-block; } }
+.gi-chat.gi-override .gi-collapse-wrapper.gi-widget-blink,
+.gi-chat.gi-override .gi-collapse-wrapper.gi-widget-blink .gi-collapse {
+  background-color: #006dcc; }

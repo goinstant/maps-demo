@@ -24,6 +24,7 @@ var _ = window._;
 var UserColors = window.goinstant.widgets.UserColors;
 var UserList = window.goinstant.widgets.UserList;
 var Form = window.goinstant.widgets.Form;
+var Chat = window.goinstant.widgets.Chat;
 
 /**
  * @constructor
@@ -41,7 +42,8 @@ function MapDemo(config) {
     container: config.container,
     scrollEnabled: config.scrollEnabled,
     streetEnabled: config.streetEnabled,
-    throttle: config.throttle || 0
+    throttle: config.throttle || 0,
+    chatEnabled: config.chatEnabled
   };
 }
 
@@ -124,6 +126,11 @@ MapDemo.prototype._initializeComponents = function(cb) {
       _.bind(userList.initialize, userList),
       _.bind(form.initialize, form)
     ];
+
+    if (self._mapOptions.chatEnabled) {
+      var chat = new Chat({ room: self._room, position: 'left' });
+      tasks.push(_.bind(chat.initialize, chat));
+    }
 
     async.parallel(tasks, cb);
   });
